@@ -37,13 +37,6 @@ This folder contains the front-end and back-end web application files:
 
 This file provides a report on the visualizations and insights generated from the data.
 
-## Technologies Used
-
-* **Programming Languages**: Python, C/C++, Java
-* **Databases & Frameworks**: SQL, Oracle
-* **Web Technologies**: HTML, CSS, JavaScript, Bootstrap, PHP, React, Redux, Material UI
-* **Software Tools**: Git, AWS, Orange, Power BI, Docker, Azure
-
 ## Setup Instructions
 
 1. **Clone the repository** (if hosted on a platform like GitHub).
