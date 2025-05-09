@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix</title>
+    <style>
+        /* Default button style */
+        .timing-btn {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Active button style when clicked */
+        .timing-btn.active {
+            background-color: rgb(172, 26, 26);
+            color: white;
+            border: 2px solid rgb(172, 26, 26);
+        }
+
+        /* Additional Styles */
+        .form-section {
+            margin-top: 20px;
+            color: black;
+        }
+
+        /* Style for smaller text boxes and inputs */
+        .form-section input{
+            padding: 8px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 680px; /* Match the size of other fields */
+        }
+        .form-section select {
+            padding: 8px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 700px; /* Match the size of other fields */
+        }
+
+        /* Style for labels */
+        .form-section label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold; /* Making the labels bold */
+        }
+
+        .payment-method {
+            margin-top: 20px;
+        }
+
+        /* Styling for dropdown */
+        .payment-method select {
+            padding: 8px;
+            width: 100%;
+            max-width: 650px; /* Match the size of other fields */
+        }
+
+        /* Added margin to each section for spacing */
+        .form-section input, 
+        .form-section select,
+        .form-section label {
+            margin-top: 15px;
+        }
+
+        /* Book Ticket button */
+        .book-btn {
+            padding: 12px 24px;
+            background-color:  rgb(172, 26, 26);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 680px;
+            margin-top: 20px;
+            max-width: 700px;
+        }
+
+        .book-btn:hover {
+            background-color: rgb(101, 15, 15);
+        }
+
+        .back-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(172, 26, 26);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background-color: rgb(101, 15, 15);
+}
+
+
+    </style>
+    <script>
+        function handleButtonClick(event) {
+            // Remove the 'active' class from all buttons
+            const buttons = document.querySelectorAll('.timing-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center; background: none; color: white;">
+
+    <div class="movie-box" style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 20px;">
+        <!-- Left Part (Image) -->
+        <div class="left-part" style="flex: 1; margin-right: 20px;">
+            <img src="images/The Matrix.jpg" alt="The Matrix" style="width: 100%; height: auto; border-radius: 10px; margin-top: 90px;">
+        </div>
+
+        <!-- Right Part (Text and Buttons) -->
+         
+        <div class="right-part" style="flex: 1; text-align: left; margin-top: 20px;">
+            <a href="landing.html" class="back-btn">← Back</a>
+
+            <div class="movie-title" style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: rgb(172, 26, 26);">
+                <h3>The Matrix</h3>
+            </div>
+            <div class="screen-timing" style="margin-top: 20px;">
+                <p style="font-size: 18px; margin-bottom: 10px; color: black;">Screen 1</p>
+                <div class="timing-buttons" style="display: flex; gap: 10px;">
+                    <button class="timing-btn" onclick="handleButtonClick(event)">
+                        12:00 PM
+                    </button>
+                    <button class="timing-btn" onclick="handleButtonClick(event)">
+                        3:30 PM
+                    </button>
+                    <button class="timing-btn" onclick="handleButtonClick(event)">
+                        7:00 PM
+                    </button>
+                </div>
+            </div>
+
+            <!-- New Form Fields -->
+            <div class="form-section">
+                <!-- Date Picker -->
+                <label for="movie-date">Select Date:</label>
+                <input type="date" id="movie-date" name="movie-date" required>
+
+                <!-- Number of Seats -->
+                <label for="num-seats">Number of Seats:</label>
+                <input type="number" id="num-seats" name="num-seats" min="1" max="10" placeholder="Enter Number of Seats" required>
+
+                <!-- Seat Selection -->
+                <label for="seat-selection">Select Seat:</label>
+                <select id="seat-selection" name="seat-selection" required>
+                    <option value="" disabled selected>Seat</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                </select>
+
+                <!-- Payment Method -->
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                     <option value="" disabled selected>Method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="zelle">MasterCard</option>
+                    <option value="visa-card">Visa Card</option>
+                    <option value="visa-card">Apple Pay</option>
+                    <option value="visa-card">Google Pay</option>
+                    <option value="visa-card">Cryptocurrency</option>
+                </select>
+            </div>
+
+            <!-- Book Tickets Button -->
+            <button class="book-btn">Book Tickets</button>
+        </div>
+    </div>
+
+</body>
+</html>

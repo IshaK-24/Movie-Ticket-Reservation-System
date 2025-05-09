@@ -1,0 +1,359 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Content Section */
+.content {
+    margin-left: 90px;
+    width: calc(100% - 300px); 
+    padding: 20px;
+    margin-top: 1500px; 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/Image1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 95% auto;
+    background-attachment: fixed;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+
+
+/* Signup & Login Forms */
+.container {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.container h1 {
+    position: absolute;
+    top: 115px; 
+    color: rgb(209, 13, 13);
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+
+.signup-form, .login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.signup-form h2, .login-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.signup-form input, .login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #525252;
+    background-color: #343333;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup-form button, .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup-form button:hover, .login-form button:hover {
+    background-color: #e50914;
+}
+
+.signup-link, .login-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.signup-link:hover, .login-link:hover {
+    text-decoration: underline;
+}
+
+        
+
+       /* Hero Section */
+.hero {
+    margin-top: 50px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: url('https://example.com/hero-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    position: relative;
+    width: 100%; /* Allow full width */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 150%; /* Ensure it takes up all the available space */
+    max-width: 1400px; /* Increase the max-width to make it wider */
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.play-btn {
+    padding: 12px 24px;
+    background-color: red;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.play-btn:hover {
+    background-color: #b6060e;
+}
+/* Movies Section */
+.movies {
+    padding: 40px 20px;
+    text-align: left; /* Align the text to the left */
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align movies to the left */
+    gap: 20px;
+}
+
+.movies h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Movie Box */
+.movie {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Movie Images */
+.movie img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover img {
+    transform: scale(1.05);
+}
+
+/* Movie Details */
+.movie-details {
+    padding: 10px;
+}
+
+.movie h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.movie p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Hover Effect */
+.movie:hover {
+    transform: scale(1.05);
+}
+
+/* "Get Tickets" Button */
+.ticket-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.ticket-btn:hover {
+    background-color: darkred;
+}
+
+/* Search Bar Style */
+.search-bar {
+    margin-top: 100px;
+    width: 50%; /* Increase the width of the search bar */
+    padding: 14px 20px; /* Adjust padding for a larger size */
+    background-color: black; /* Black background */
+    border: none;
+    color: white; /* White text color */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    margin: 20px auto; /* Adjust margin to bring it closer to the hero section */
+    display: block;
+}
+
+.search-bar::placeholder {
+    color: white; /* Placeholder text color */
+    opacity: 0.6; /* Slightly lighter opacity for placeholder text */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove the default outline on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add subtle white glow on focus */
+}
+
+
+/* Logout Button Styles */
+.logout-btn {
+    position: absolute;  /* Position the button relative to its nearest positioned ancestor */
+    top: 20px;  /* Adjust this value to move it down a little */
+    right: 20px;  /* Adjust this value to move it from the right edge */
+    padding: 12px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 30px;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 14px;
+}
+.search-container {
+    position: relative;
+}
+
+.suggestions-box {
+    position: absolute;
+    background-color: white;
+    color: black;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 999;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.suggestions-box div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.suggestions-box div:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-form, .login-form {
+        width: 90%;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
